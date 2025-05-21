@@ -1,14 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "reset.css";
+@import "layout.css";
 
 :root {
+  /* Farver */
   --color-primary: #5a6b3b;
   --color-secondary: #3c1518;
   --color-background: #f7f5ea;
   --text-color: #3c1518;
+
+  /* Skrifttyper og vægt */
+  --font-family-base: "Poppins", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-medium: 400;
+  --font-weight-regular: 300;
+
+  /* Typografi – mobil*/
+  --font-size-h1: 2.7rem;
+  --font-size-h2: 1.5rem;
+  --font-size-p: 1rem;
+}
+
+/* Desktop typografi*/
+@media (min-width: 768px) {
+  :root {
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.2rem;
+    --font-size-p: 1.125rem;
+  }
 }
 
 main {
@@ -17,4 +35,26 @@ main {
 
 body {
   background-color: var(--color-background);
+}
+
+h1 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
+  color: var(--text-color);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h2);
+  color: var(--text-color);
+}
+
+p {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-p);
+  color: var(--text-color);
 }

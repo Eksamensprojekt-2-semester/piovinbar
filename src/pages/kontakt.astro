@@ -2,7 +2,100 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout />
-<div>
-  <img src="./illustrations/facade_illu.svg" alt="facade" />
-</div>
+<MainLayout>
+  <h1>Info</h1>
+
+  <div class="section1">
+    <div class="grid_1-1">
+      <div class="boxfacade">
+        <img class="facadeillu" src="./illustrations/facade_illu.svg" alt="facade" />
+      </div>
+      <div class="infobox">
+        <div class="info">
+          <h2>Kontakt</h2>
+          <p>+45 53 54 64 55<br />piovin@piovin.dk</p>
+        </div>
+        <div class="info">
+          <h2>Åbningstider</h2>
+          <p>
+            <div class="grid_1-1">
+              <div>
+                <p>
+                  Man-Tors:<br />
+                  Fre-Lør: <br />
+                  Søn:
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  16:00-00:00<br />
+                  14:00-00:00<br />
+                  14:00-22:00
+                </p>
+              </div>
+            </div>
+          </p>
+        </div>
+        <div class="info">
+          <h2>Adresse</h2>
+          <p>+45 53 54 64 55<br />piovin@piovin.dk</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section2">
+    <div>
+      <div>
+        <h2>Booking</h2>
+        <p class="bookingtekst">Du kan altid booke bord til en middag eller et glas vin hos os. Ring i barens åbningstid på +45 53 54 64 55 eller skriv til piovin@piovin.dk. <br /> <br /> Planlægger du en fødselsdag, barnedåb, vinsmagning eller et andet arrangement? Vi stiller gerne vinbaren til rådighed kontakt os, så finder vi den rette løsning. <br /> <br />Har du yderligere spørgsmål, hjælper vi gerne.</p>
+      </div>
+      <div class="boxoister">
+        <img class="oisterillu" src="./illustrations/oister_illu.svg" alt="facade" />
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .boxfacade {
+    position: relative;
+  }
+
+  .facadeillu {
+    width: 250px;
+    position: absolute;
+    top: 8%;
+    left: -40%;
+  }
+
+  .infobox {
+    padding-top: 2rem;
+  }
+
+  .info {
+    padding-bottom: 2rem;
+  }
+
+  .boxoister {
+    position: relative;
+  }
+
+  .oisterillu {
+    width: 550px;
+    position: absolute;
+    margin-top: -100%;
+    margin-left: 23%;
+    z-index: -1;
+    opacity: 20%;
+  }
+
+  .bookingtekst {
+    max-width: 33ch;
+  }
+
+  .section1 {
+    margin-bottom: 10rem;
+  }
+</style>
