@@ -1,0 +1,63 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import EventCard from "../components/EventCard.astro";
+
+const url = "https://cqlxxfhyqiyjfdhrylvn.supabase.co/rest/v1/events";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxbHh4Zmh5cWl5amZkaHJ5bHZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3NDEwNTUsImV4cCI6MjA2MzMxNzA1NX0.dSKgfRJPrjOBnTq3LxqGMrMSXYqe-BQoGV1IjmFRWgk";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const request = await fetch(url, options);
+const data = await request.json();
+
+console.log("data", data);
+---
+
+<MainLayout title="home">
+  <section class="event_side">
+    <div class="overskrift">
+      <h1>Kommende Events</h1>
+      <p>På pio åbner vi dørerne op for...</p>
+    </div>
+
+    <div class="events">
+      {
+        data.map((product) => {
+          return <EventCard data={product} />;
+        })
+      }
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .overskrift {
+    display: grid;
+    justify-items: center;
+    color: #3c1518;
+
+    padding-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .event_side {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+</style>
