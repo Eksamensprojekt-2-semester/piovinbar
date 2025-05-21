@@ -1,0 +1,141 @@
+---
+// Astro props og CSS-import
+import "../styles/style.css";
+const { title } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footerbaggrund"></div>
+
+  <div class="footer_indhold">
+    <section>
+      <h3>Kontaktinformationer</h3>
+      <p>Bagerstræde 2, 1617 København V</p>
+      <p>+45 53 54 64 55</p>
+      <p>Piovin@piovin.dk</p>
+    </section>
+
+    <section>
+      <img class="logohvid" src="./images/logohvid.svg" alt="Logohvid" />
+    </section>
+
+    <section>
+      <h3>Åbningstider</h3>
+      <div class="aabningstider">
+        <div class="tid">
+          <p>Man-Tors:</p>
+          <p>16:00-00:00</p>
+        </div>
+        <div class="tid">
+          <p>Fre-Lør:</p>
+          <p>14:00-00:00</p>
+        </div>
+        <div class="tid">
+          <p>Søn:</p>
+          <p>14:00-22:00</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <a href="">Insta</a>
+      <a href="">Fb</a>
+    </section>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    color: white;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    height: 200px;
+
+    .footerbaggrund {
+      position: absolute;
+      top: 0; /* Sørger for at bølgen er nederst */
+      left: 0;
+      width: 100%;
+      height: 700px;
+      background: url("./images/footer.svg");
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .footer_indhold {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .footer_indhold img {
+      max-width: 150px;
+    }
+
+    .aabningstider {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tid {
+      display: flex;
+      justify-content: space-between;
+      max-width: 220px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .footer {
+      position: relative;
+      color: white;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+      height: 300px;
+    }
+
+    .footerbaggrund {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 320px;
+      background: url("./images/footer.svg");
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .footer_indhold {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .footer_indhold section {
+      flex: 1 1 300px;
+      min-width: 300px;
+    }
+
+    .footer_indhold img {
+      max-width: 150px;
+    }
+
+    .aabningstider {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tid {
+      display: flex;
+      justify-content: space-between;
+      max-width: 220px;
+    }
+  }
+</style>
