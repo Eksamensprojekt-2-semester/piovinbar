@@ -1,0 +1,67 @@
+---
+const { data } = Astro.props;
+---
+
+<a href=`/products/${data.slug}`>
+  <article a href=`/products/${data.slug}` class="hover-1">
+    <img src={data.images} alt=`Image of ${data.product}` />
+
+    <div class="overlay">
+      <h2 class="tekst">Oplev d. {data.date}</h2>
+      <!-- <img src="./images/logo.svg" alt="" class="logo" /> -->
+    </div>
+  </article>
+
+  <div class="tekst_boks">
+    <h3>{data.name}</h3>
+    <p>{data.short_description}</p>
+  </div>
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  p,
+  h3 {
+    color: #3c1518;
+  }
+
+  h2 {
+    color: #f7f5ea;
+  }
+
+  .tekst_boks {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .hover-1 {
+    position: relative; /* Gør det muligt at placere overlayet */
+    display: inline-block; /* Gør containeren til en blok, der kun fylder billedets bredde */
+  }
+
+  .overlay {
+    position: absolute; /* Gør det muligt at placere overlayet over billedet */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5a6b3b; /* Semi-transparent grå baggrund */
+    opacity: 0; /* Skjuler overlayet som standard */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* Glidende overgang for opacitet */
+    border-radius: 5%;
+  }
+
+  .hover-1:hover .overlay {
+    opacity: 1; /* Gør overlayet synligt ved hover */
+  }
+
+  .logo {
+    max-width: 20%;
+  }
+</style>
