@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #5a6b3b;
+  --color-secondary: #3c1518;
+  --color-background: #f7f5ea;
+  --text-color: #3c1518;
+}
+
+main {
+  max-width: 100%;
+}
