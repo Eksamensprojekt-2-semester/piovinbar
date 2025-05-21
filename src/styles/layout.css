@@ -16,7 +16,9 @@ main {
   padding-inline: 2rem;
 }
 
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 800px) {
+  main {
+    padding-inline: 15rem;
+    max-width: 1200px;
+  }
 }
