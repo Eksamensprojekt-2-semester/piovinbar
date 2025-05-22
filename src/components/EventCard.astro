@@ -2,18 +2,18 @@
 const { data } = Astro.props;
 ---
 
-<a href=`/products/${data.slug}`>
-  <article a href=`/products/${data.slug}` class="hover-1">
-    <img src={data.images} alt=`Image of ${data.product}` />
+<a href={`/events/${data.slug}`}>
+  <article class="hover-1">
+    <img src={data.images} alt={`Image of ${data.name}`} class="billede" />
 
     <div class="overlay">
       <h2 class="tekst">Oplev d. {data.date}</h2>
-      <!-- <img src="./images/logo.svg" alt="" class="logo" /> -->
     </div>
+    <img src="./illustrations/event_ilu.svg" alt="" class="event_ilu" />
   </article>
 
   <div class="tekst_boks">
-    <h3>{data.name}</h3>
+    <h3 color:>{data.name}</h3>
     <p>{data.short_description}</p>
   </div>
 </a>
@@ -30,11 +30,24 @@ const { data } = Astro.props;
 
   h2 {
     color: #f7f5ea;
+    font-size: 30px;
   }
 
   .tekst_boks {
     padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  @media (min-width: 600px) {
+    h2 {
+      color: #f7f5ea;
+      font-size: 30px;
+    }
+
+    .tekst_boks {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+    }
   }
 
   .hover-1 {
@@ -55,13 +68,27 @@ const { data } = Astro.props;
     align-items: center;
     transition: opacity 0.3s ease; /* Glidende overgang for opacitet */
     border-radius: 5%;
+    z-index: 2;
   }
 
   .hover-1:hover .overlay {
     opacity: 1; /* Gør overlayet synligt ved hover */
   }
 
-  .logo {
-    max-width: 20%;
+  .event_ilu {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .billede {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
   }
 </style>

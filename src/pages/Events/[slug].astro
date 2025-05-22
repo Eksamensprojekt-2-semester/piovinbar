@@ -1,5 +1,5 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
   const url = "https://cqlxxfhyqiyjfdhrylvn.supabase.co/rest/v1/events";
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
   return data.map((item) => {
     return {
-      params: { product: item.slug },
+      params: { slug: item.slug },
       props: { item },
     };
   });
@@ -25,13 +25,19 @@ export async function getStaticPaths() {
 const { item } = Astro.props;
 ---
 
-<MainLayout title={`${item.product}`}>
-  <header>
-    <h1>{item.product}</h1>
-
-    <h2>Description</h2>
-    <p>{item.description}</p>
-  </header>
+<MainLayout title={`${item.name}`}>
+  <section>
+    <img src={item.images} alt="" />
+    <div>
+      <h1>{item.name}</h1>
+      <p>{item.long_description}</p>
+      <ul>
+        <li>Dato:{item.date}</li>
+        <li>Sted: {item.place}</li>
+        <li>Tid:{item.time}</li>
+      </ul>
+    </div>
+  </section>
 </MainLayout>
 
 <style>
