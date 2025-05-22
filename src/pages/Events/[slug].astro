@@ -26,43 +26,95 @@ const { item } = Astro.props;
 ---
 
 <MainLayout title={`${item.name}`}>
-  <section class="grid1_1">
-    <img src={item.images} alt="" />
-    <div>
-      <h1>{item.name}</h1>
-      <p>{item.long_description}</p>
-      <ul>
-        <li>Dato:{item.date}</li>
-        <li>Sted: {item.place}</li>
-        <li>Tid:{item.time}</li>
-      </ul>
-    </div>
-  </section>
+  <div class="event">
+    <section class="grid1_1">
+      <div class="billede">
+        <img src={item.images} alt="" />
+        <img src="/illustrations/event_ilu.svg" alt="" class="event_ilu" />
+      </div>
+
+      <div>
+        <h2>{item.name}</h2>
+        <p>{item.long_description}</p>
+        <ul class="evnt_liste">
+          <li>Dato: {item.date}</li>
+          <li>Sted: {item.place}</li>
+          <li>Tid: {item.time}</li>
+          <li>Pris: GRATIS</li>
+        </ul>
+        <img src="/illustrations/wineset_illu.svg" alt="" class="wineset" />
+      </div>
+    </section>
+  </div>
 </MainLayout>
 
 <style>
-  h1,
-  h2 {
-    font-size: 1rem;
-  }
-  h2 {
-    text-transform: uppercase;
-  }
   p {
     max-width: 75ch;
   }
 
-  /* .grid1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  } */
+     .evnt_liste {
+      padding-top: 1rem;
+      padding-left: 1rem;
+    }
+
+  .event_ilu {
+    position: absolute;
+   top: 5%;
+    left: 9%;
+    z-index: 0;
+    max-width: 400px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .billede {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    padding-bottom:3rem;
+        padding-left: 1rem;
+  }
+
+  .billede img:first-of-type {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    height: auto;
+    display: block;
+  }
 
   @media (min-width: 600px) {
     .grid1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-top: 3rem;
+      position: relative;
     }
 
-    
+    .event {
+      padding-inline: 3rem;
+    }
+
+    .wineset {
+      position: absolute;
+      top: 85%;
+      left: 86%;
+      width: 16%;
+    }
+
+    .event_ilu {
+           position: absolute;
+        top: 3%;
+        left: 7%;
+        z-index: 0;
+        max-width: 430px;
+        height: auto;
+        pointer-events: none;
   }
+  }
+
+
+
 </style>
