@@ -20,7 +20,7 @@ console.log("data", data);
 <MainLayout title="home">
   <section class="event_side">
     <div class="overskrift">
-      <h1>Kommende Events</h1>
+      <h1 class">Kommende Events</h1>
       <p>På pio åbner vi dørerne op for...</p>
     </div>
 
@@ -43,10 +43,6 @@ console.log("data", data);
     padding-bottom: 2rem;
   }
 
-  /* h1 {
-    font-size: 2rem;
-  } */
-
   .section {
     padding: 1rem;
   }
@@ -59,9 +55,8 @@ console.log("data", data);
 
 
 
+
   @media (min-width: 600px);{
-
-
  .overskrift {
     display: grid;
     justify-items: center;
@@ -69,10 +64,6 @@ console.log("data", data);
 
     padding-bottom: 3rem;
   }
-
-  /* h1 {
-    font-size: 2rem;
-  } */
 
   .section {
     padding: 2rem;
@@ -86,6 +77,10 @@ console.log("data", data);
 
   .event_side {
     padding-left: 1rem;
+  }
+
+  h1{
+   margin-bottom: -3rem!;
   }
 
   }
