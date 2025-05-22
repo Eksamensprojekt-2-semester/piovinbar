@@ -18,7 +18,7 @@ main {
 
 @media screen and (min-width: 800px) {
   main {
-    padding-inline: 15rem;
+    padding-inline: 10rem;
     max-width: 1200px;
   }
 }
