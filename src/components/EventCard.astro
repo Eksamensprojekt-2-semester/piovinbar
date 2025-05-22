@@ -7,7 +7,8 @@ const { data } = Astro.props;
     <img src={data.images} alt={`Image of ${data.name}`} class="billede" />
 
     <div class="overlay">
-      <h2 class="tekst">Oplev d. {data.date}</h2>
+      <h2 class="tekst">OPLEV D. {data.date}</h2>
+      <img src="./illustrations/logo_event.svg" alt="" class="logo_event"/>
     </div>
     <img src="./illustrations/event_ilu.svg" alt="" class="event_ilu" />
   </article>
@@ -45,8 +46,8 @@ const { data } = Astro.props;
     }
 
     .tekst_boks {
-      padding-top: 1rem;
-      padding-bottom: 3rem;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
     }
   }
 
@@ -63,12 +64,13 @@ const { data } = Astro.props;
     bottom: 0;
     background-color: #5a6b3b; /* Semi-transparent grå baggrund */
     opacity: 0; /* Skjuler overlayet som standard */
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease; /* Glidende overgang for opacitet */
     border-radius: 5%;
     z-index: 2;
+    gap: 2px;
   }
 
   .hover-1:hover .overlay {
@@ -91,4 +93,5 @@ const { data } = Astro.props;
     width: 100%;
     height: auto;
   }
+
 </style>

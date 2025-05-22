@@ -26,7 +26,7 @@ const { item } = Astro.props;
 ---
 
 <MainLayout title={`${item.name}`}>
-  <section>
+  <section class="grid1_1">
     <img src={item.images} alt="" />
     <div>
       <h1>{item.name}</h1>
@@ -41,9 +41,6 @@ const { item } = Astro.props;
 </MainLayout>
 
 <style>
-  header {
-    padding: 2rem;
-  }
   h1,
   h2 {
     font-size: 1rem;
@@ -54,19 +51,18 @@ const { item } = Astro.props;
   p {
     max-width: 75ch;
   }
-  img {
-    max-width: 100%;
-  }
-  .images {
+
+  /* .grid1_1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .colors {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    grid-template-columns: 1fr 1fr;
+  } */
+
+  @media (min-width: 600px) {
+    .grid1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    
   }
 </style>
