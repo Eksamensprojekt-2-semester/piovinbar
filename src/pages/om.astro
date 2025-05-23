@@ -5,7 +5,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <h1>Om Pio Vinbar</h1>
   <div class="grid_1-1">
-    <img src="./images/bar_pic.webp" alt="bar" />
+    <div>
+      <video autoplay loop muted playsinline>
+        <source src="./videos/piomontage.webm" type="video/webm" />
+        Din browser understøtter ikke video-tagget.
+      </video>
+    </div>
     <div>
       <p class="pio_text">Pio Vinbar grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
       <img class="can" src="./illustrations/can_illu.svg" alt="can" />
@@ -33,6 +38,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
+  video {
+    max-width: 500px;
+  }
   .pio_text {
     margin-top: 2rem;
   }
