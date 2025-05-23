@@ -1,0 +1,111 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <h1>Om Pio Vinbar</h1>
+  <div class="grid_1-1">
+    <img src="./images/bar_pic.webp" alt="bar" />
+    <div>
+      <p class="pio_text">Pio Vinbar grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
+      <img class="can" src="./illustrations/can_illu.svg" alt="can" />
+    </div>
+  </div>
+
+  <div class="grid_1-1 amore">
+    <div>
+      <h2 class="who">Hvem er vi?</h2>
+      <p class="amore_text">Bag Pio Vinbar er vi ejerne Jesper, Anders, Kaare og Phillip, som alle deler en fælles passion for vin. I dag er vi stolte af at have et dedikeret og erfarent team af søde og passionerede medarbejdere, der hver dag arbejder for at give vores gæster den bedste oplevelse.</p>
+      <img class="wineset" src="./illustrations/wineset_illu.svg" alt="wineset" />
+    </div>
+    <img src="./images/con_amore_pic.webp" alt="people" />
+  </div>
+
+  <div class="grid_1-1 name_text">
+    <div class="wine_box">
+      <img class="wine" src="./illustrations/wine_illu.svg" alt="wine" />
+    </div>
+    <div>
+      <h2>Hvor kommer navnet fra?</h2>
+      <p>Navnet Pio Vinbar er en hyldest til Pio Vinhandel, der blev grundlagt på Østerbro i 1881. Da det gamle inventar fra vinhandlen skulle fjernes, besluttede Kaare at han ville bevare det, og opbevare det på sin gård. <br /><br />Han delte idéen med Jesper, og sammen med Anders blev Pio Vinbar til. Baren åbnede den 24. november 2017, og senere blev Phillip den fjerde ejer. <br /><br />I dag er de gamle vinreoler fra Pio Vinhandel igen fyldt med vin, men denne gang som en del af Pio Vinbar, og det glæder vi os virkelig over.</p>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .pio_text {
+    margin-top: 2rem;
+  }
+
+  .wineset {
+    display: none;
+  }
+
+  .can {
+    max-width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    padding-bottom: 5rem;
+  }
+
+  .amore_text {
+    padding-bottom: 2rem;
+  }
+
+  .amore {
+    margin-bottom: 5rem;
+  }
+  .name_text {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @media screen and (max-width: 800px) {
+    h2 {
+      text-align: center;
+    }
+    .wine_box {
+      position: relative;
+    }
+    .wine {
+      width: 250px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    h1 {
+      padding-bottom: 2rem;
+    }
+    h2 {
+      text-align: left;
+    }
+    .pio_text {
+      padding-top: 0rem;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .can {
+      max-width: 240px;
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .wineset {
+      max-width: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: 0rem;
+      padding-bottom: 5rem;
+    }
+    .wine {
+      max-width: 350px;
+    }
+  }
+</style>
