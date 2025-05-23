@@ -1,5 +1,144 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import MenuKort from "../components/MenuKort.astro";
+
+import EventCard from "../components/EventCard.astro";
+
+const url = "https://cqlxxfhyqiyjfdhrylvn.supabase.co/rest/v1/events";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxbHh4Zmh5cWl5amZkaHJ5bHZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3NDEwNTUsImV4cCI6MjA2MzMxNzA1NX0.dSKgfRJPrjOBnTq3LxqGMrMSXYqe-BQoGV1IjmFRWgk";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const request = await fetch(url, options);
+const data = await request.json();
+
+console.log("data", data);
 ---
 
-<MainLayout />
+<MainLayout>
+  <section class="grid1_1">
+    <img src="/images/menucard_pic.webp" alt="" />
+    <div>
+      <h2>Åbningstider</h2>
+      <div class="open">
+        <div class="dage">
+          <p>Man-Tors:</p>
+          <p>Fre-Lør:</p>
+          <p>Søn:</p>
+        </div>
+        <div class="tider">
+          <p>16:00-00:00</p>
+          <p>14:00-00:00</p>
+          <p>14:00-22:00</p>
+        </div>
+      </div>
+    </div>
+    <img src="./illustrations/wineset_illu.svg" alt="" class="wineset" />
+  </section>
+
+  <MenuKort />
+
+  <div class="mad_billeder">
+    <img src="./images/prawns_pic.webp" alt="" />
+    <img src="./images/light_pic.webp" alt="" />
+    <img src="./images/olives_pic.webp" alt="" />
+  </div>
+
+  <section>
+    <div class="con_amore">Con Amore</div>
+    <div class="grid1_1">
+      <img src="./images/people_frame_pic.webp" alt="" />
+      <p>Hos Pio har vi fokus på vores gæsters oplevelser, når de besøger os. Vi ønsker at skabe et rum, hvor der er plads til afslappet hygge i behagelige omgivelser, hvor vi lægger vægt på at præsentere gode produkter med kærlighed og lidenskab. Vi tror på, at venlighed og smil giver alle den bedste oplevelse. Vores nøgleord er hygge, atmosfære, intimitet, varme og relationer. Og vi håber at vi lever op til dem.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="event_h2">Kommende Events</h2>
+    <div class="events">
+      {
+        data.slice(0, 3).map((event) => {
+          return <EventCard data={event} />;
+        })
+      }
+    </div>
+    <Button />
+  </section>
+</MainLayout>
+
+<style>
+  .open {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .con_amore {
+    font-family: "Caveat";
+    font-size: 4rem;
+    color: #5a6b3b;
+    display: grid;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .wineset {
+    width: 40%;
+  }
+
+  .mad_billeder {
+    display: grid;
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+
+  @media (min-width: 600px) {
+    .grid1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .wineset {
+      position: absolute;
+      width: 14%;
+      top: 55%;
+      left: 62%;
+    }
+
+    .mad_billeder {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .con_amore {
+      font-family: "Caveat";
+      font-size: 7rem;
+      color: #5a6b3b;
+      display: grid;
+      justify-content: center;
+      padding-top: 4rem;
+    }
+
+    .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .event_h2 {
+      display: grid;
+      justify-content: center;
+      padding-bottom: 2rem;
+      padding-top: 4rem;
+    }
+  }
+</style>
