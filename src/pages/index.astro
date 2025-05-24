@@ -21,6 +21,25 @@ console.log("data", data);
 ---
 
 <MainLayout>
+  <section class="hero">
+    <video class="hero_video" autoplay loop muted playsinline>
+      <source src="./videos/piomontage.webm" type="video/webm" />
+    </video>
+
+    <div class="hero-overlay">
+      <img class="illustration-left" src="./illustrations/hero_vin_illu_stroke.svg" alt="" />
+
+      <div class="hero-content">
+        <h1>Pio Vinbar</h1>
+      </div>
+
+      <p class="hero_tekst">Bagerstræde 2, 1617 København V <br /> Reservér bord på +45 53 54 64 55</p>
+
+      <img class="illustration-right" src="./illustrations/hero_vinglas_illu.svg" alt="" />
+    </div>
+  </section>
+  <div></div>
+
   <section class="grid1_1">
     <img src="/images/menucard_pic.webp" alt="" />
     <div>
@@ -97,7 +116,101 @@ console.log("data", data);
     padding-top: 3rem;
   }
 
+  .hero {
+    margin-inline: -10rem; /* trækker den ud */
+    width: calc(100% + 20rem); /* fylder ud over padding */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .illustration-left {
+    position: absolute;
+    z-index: 1;
+    top: -11%;
+    width: 145%;
+    left: -35%;
+  }
+
+  .hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    width: 131%;
+    left: -22%;
+  }
+
+  .hero_tekst {
+    position: absolute;
+    z-index: 2;
+    top: 72%;
+    left: 15.2%;
+  }
+
+  .illustration-right {
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    width: 12%;
+    left: 71%;
+  }
+
   @media (min-width: 600px) {
+    .hero {
+      margin-inline: -10rem; /* trækker den ud */
+      width: calc(100% + 20rem); /* fylder ud over padding */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero_video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .illustration-left {
+      position: absolute;
+      z-index: 1;
+      top: -11%;
+      width: 145%;
+      left: -35%;
+    }
+
+    .hero-content {
+      position: absolute;
+      z-index: 2;
+      top: 61%;
+      width: 150%;
+      left: -50%;
+    }
+
+    .hero_tekst {
+      position: absolute;
+      z-index: 2;
+      top: 72%;
+      left: 15.2%;
+    }
+
+    .illustration-right {
+      position: absolute;
+      z-index: 1;
+      top: 48%;
+      width: 12%;
+      left: 71%;
+    }
+
     .grid1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
