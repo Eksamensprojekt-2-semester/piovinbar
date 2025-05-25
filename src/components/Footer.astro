@@ -23,15 +23,15 @@ const { title } = Astro.props;
       <h3>Åbningstider</h3>
       <div class="tid">
         <p class="p">Man-Tors:</p>
-        <p class="p">16:00-00:00</p>
+        <p class="p_tid">16:00-00:00</p>
       </div>
       <div class="tid">
         <p class="p">Fre-Lør:</p>
-        <p class="p">14:00-00:00</p>
+        <p class="p_tid">14:00-00:00</p>
       </div>
       <div class="tid">
         <p class="p">Søn:</p>
-        <p class="p">14:00-22:00</p>
+        <p class="p_tid">14:00-22:00</p>
       </div>
     </div>
   </div>
@@ -58,13 +58,13 @@ const { title } = Astro.props;
 
     .footer {
       position: relative;
-      color: white;
+      color: #f7f5ea;
       padding-top: 7rem;
       padding-bottom: 1rem;
     }
 
     .p {
-      color: white;
+      color: #f7f5ea;
     }
 
     .footerbaggrund {
@@ -84,7 +84,7 @@ const { title } = Astro.props;
     }
 
     .kontakt {
-      padding-left: 6rem;
+      padding-left: 3rem;
     }
 
     .tid {
@@ -92,6 +92,15 @@ const { title } = Astro.props;
       justify-content: space-between;
       max-width: 220px;
     }
+
+    .p_tid {
+      display: flex;
+      justify-content: space-between;
+      max-width: 220px;
+      color: #f7f5ea;
+      padding-left: 3rem;
+    }
+
     .logohvid {
       max-width: 150px;
       margin-top: 1rem;
