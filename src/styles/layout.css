@@ -8,12 +8,12 @@ main,
 header > nav,
 footer > * {
   width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
 }
 
 main {
   padding-inline: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 800px) {
