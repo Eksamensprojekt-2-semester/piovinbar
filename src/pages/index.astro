@@ -63,9 +63,9 @@ console.log("data", data);
   <MenuKort />
 
   <div class="mad_billeder">
-    <img src="./images/prawns_pic.webp" alt="" />
-    <img src="./images/light_pic.webp" alt="" />
-    <img src="./images/olives_pic.webp" alt="" />
+    <img src="./images/prawns_pic.webp" alt="" class="img_1" />
+    <img src="./images/light_pic.webp" alt="" class="img_2" />
+    <img src="./images/olives_pic.webp" alt="" class="img_3" />
   </div>
 
   <section>
@@ -90,12 +90,6 @@ console.log("data", data);
 </MainLayout>
 
 <style>
-  .open {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
   .con_amore {
     font-family: "Caveat";
     font-size: 4rem;
@@ -228,8 +222,14 @@ console.log("data", data);
 
     .mad_billeder {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 2rem;
+      grid-template-rows: 1f 1fr 1fr;
+    }
+
+    .img_1 {
+      display: grid;
+      grid-row: span 1/2;
     }
 
     .con_amore {
@@ -244,7 +244,7 @@ console.log("data", data);
     .events {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
+      gap: 5rem;
     }
 
     .event_h2 {

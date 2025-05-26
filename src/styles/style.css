@@ -29,8 +29,8 @@
   }
 }
 
-main {
-  max-width: 100%;
+html {
+  font-size: 14px; /* Mindre end standard 16px */
 }
 
 body {
