@@ -4,161 +4,172 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <h1>Mød Pio Vinbar</h1>
-  <div class="grid_1-1">
-    <div class="video_box">
-      <video autoplay loop muted playsinline>
-        <source src="./videos/piomontage.webm" type="video/webm" />
-        Din browser understøtter ikke video-tagget.
-      </video>
-      <img class="frame" src="./illustrations/frame_illu.svg" alt="frame" />
-    </div>
-    <p>Pio Vinbar blev grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
-  </div>
-
   <div class="grid_1-1 amore">
+    <img class="amore_pic" src="/images/con_amore_pic.webp" alt="people" />
     <div>
       <h2 class="who">Hvem er vi?</h2>
-      <p class="amore_text">Bag Pio Vinbar er ejerne Jesper, Anders, Kaare og Phillip, som alle deler en fælles passion for vin. I dag er vi stolte af at have et dedikeret og erfarent team af søde og passionerede medarbejdere, der hver dag arbejder for at give vores gæster den bedste oplevelse.</p>
-      <img class="can" src="./illustrations/can_illu.svg" alt="can" />
+      <p class="amore_text">Bag Pio Vinbar er ejerne Jesper, Anders, Kaare og Phillip, som alle deler en fælles passion for vin. I dag er vi stolte af at have et dedikeret og erfarent team af søde og passionerede medarbejdere, der hver dag arbejder for at give vores gæster den bedste oplevelse. <br /><br />Vores vinreoler kommer fra Pio vin, som senere blev til Pio Vinbar. Kom forbi og se de flotte reoler og hvad vi har stående på hylderne:)</p>
     </div>
-    <img class="amore_pic" src="./images/con_amore_pic.webp" alt="people" />
   </div>
+
+  <div class="instagram_post"></div>
 
   <div class="grid_1-1 name_text">
     <div class="wine_box">
-      <img class="wine" src="./illustrations/wine_illu.svg" alt="wine" />
+      <img class="wine" src="/illustrations/wine_illu.svg" alt="wine" />
     </div>
     <div class="last_text">
       <h2>Hvor kommer navnet fra?</h2>
-      <p>Navnet Pio Vinbar er en hyldest til Pio Vinhandel, der blev grundlagt på Østerbro i 1881. Da det gamle inventar fra vinhandlen skulle fjernes, besluttede Kaare at han ville bevare det, og opbevare det på sin gård. <br /><br />Han delte idéen med Jesper, og sammen med Anders blev Pio Vinbar til. Baren åbnede den 24. november 2017, og senere blev Phillip den fjerde ejer. <br /><br />I dag er de gamle vinreoler fra Pio Vinhandel igen fyldt med vin, men denne gang som en del af Pio Vinbar, og det glæder vi os virkelig over.</p>
-      <img class="wineset_illu" src="./illustrations/wineset_illu.svg" alt="wineset" />
+      <p>Pio Vinbar blev grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
+      <img class="wineset_illu" src="/illustrations/wineset_illu.svg" alt="wineset" />
     </div>
   </div>
 
-  <style>
-    h1 {
-      margin-bottom: 2rem;
-    }
-    video {
-      max-width: 100%;
-      border-radius: 15px;
-      z-index: 1;
-    }
-    .frame {
-      position: absolute;
-      width: 100%;
-      top: 8%;
-      left: 5%;
-    }
-    .video_box {
-      display: flex;
-      justify-content: center;
+  <div class="video_box1">
+    <h4 class="con_amore">Con Amore</h4>
+    <div class="video_box">
+      <video autoplay loop muted playsinline>
+        <source src="/videos/piomontage.webm" type="video/webm" />
+        Din browser understøtter ikke video-tagget.
+      </video>
+      <img class="frame" src="/illustrations/frame_illu.svg" alt="frame" />
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .con_amore {
+    font-family: "Caveat";
+    font-size: 4rem;
+    color: #5a6b3b;
+    display: grid;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+  video {
+    max-width: 100%;
+    border-radius: 15px;
+    z-index: 1;
+  }
+  .frame {
+    position: absolute;
+    width: 100%;
+    top: 8%;
+    left: 5%;
+  }
+  .video_box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+  }
+
+  .who {
+    margin-top: 4rem;
+  }
+
+  .can {
+    display: none;
+  }
+
+  .wineset {
+    display: none;
+  }
+
+  .amore_text {
+    padding-bottom: 2rem;
+  }
+
+  .amore {
+    margin-bottom: 5rem;
+  }
+  .name_text {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wineset_illu {
+    width: 50%;
+    margin-left: auto;
+  }
+  .video_box1 {
+    margin-top: 15rem;
+  }
+  h4 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .wine_box {
       position: relative;
-      z-index: 1;
-      margin-top: -1rem;
-      margin-bottom: 3rem;
     }
-
-    .who {
-      margin-top: 4rem;
+    .wine {
+      width: 350px;
+      position: absolute;
+      transform: translate(-60%, -43%);
     }
+  }
 
-    .can {
-      display: none;
-    }
-
-    .wineset {
-      display: none;
-    }
-
-    .grid_2-1 {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
-
-    .amore_text {
-      padding-bottom: 2rem;
-    }
-
-    .amore {
+  @media screen and (min-width: 800px) {
+    .video_box {
       margin-bottom: 5rem;
     }
-    .name_text {
-      align-items: center;
+    h2 {
+      text-align: left;
+    }
+    .who {
+      margin-top: 0;
+    }
+    .pio_text {
+      padding-top: 0rem;
+    }
+    .grid_1-1 {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .amore_pic {
+      width: 100%;
+    }
+    .amore {
+      padding-top: 1rem;
+    }
+    .name_text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    p {
+      max-width: 50ch;
+    }
+    .con_amore {
+      font-family: "Caveat";
+      font-size: 7rem;
+      color: #5a6b3b;
+      display: grid;
+      justify-content: center;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    .last_text {
+      margin-top: 5rem;
     }
 
     .wineset_illu {
-      width: 50%;
+      width: 35%;
       margin-left: auto;
     }
-
-    @media screen and (max-width: 800px) {
-      .wine_box {
-        position: relative;
-      }
-      .wine {
-        width: 350px;
-        position: absolute;
-        transform: translate(-60%, -43%);
-      }
+    .video_box1 {
+      margin-top: 5rem;
     }
-
-    @media screen and (min-width: 800px) {
-      h1 {
-        margin-bottom: 5rem;
-      }
-      .video_box {
-        margin-bottom: 5rem;
-      }
-      h2 {
-        text-align: left;
-      }
-      .pio_text {
-        padding-top: 0rem;
-      }
-      .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-      }
-      .amore_pic {
-        width: 100%;
-        margin-left: -2rem;
-      }
-      .can {
-        max-width: 150px;
-        display: block;
-        margin-left: auto;
-        padding-top: 1rem;
-      }
-      .amore {
-        padding-top: 5rem;
-      }
-      .name_text {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 10rem;
-        margin-bottom: 20rem;
-      }
-      p {
-        max-width: 50ch;
-      }
-      .wine_box {
-        position: relative;
-      }
-      .wine {
-        width: 80%;
-        position: absolute;
-        transform: translate(-35%, -43%);
-        margin-top: 3rem;
-      }
-
-      .wineset_illu {
-        width: 35%;
-        margin-left: auto;
-      }
-    }
-  </style>
-</MainLayout>
+  }
+</style>
