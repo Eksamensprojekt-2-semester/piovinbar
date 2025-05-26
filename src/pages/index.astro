@@ -23,11 +23,11 @@ console.log("data", data);
 <MainLayout>
   <section class="hero">
     <video class="hero_video" autoplay loop muted playsinline>
-      <source src="./videos/piomontage.webm" type="video/webm" />
+      <source src="/videos/piomontage.webm" type="video/webm" />
     </video>
 
     <div class="hero-overlay">
-      <img class="illustration-left" src="./illustrations/hero_vin_illu_stroke.svg" alt="" />
+      <img class="illustration-left" src="/illustrations/hero_vin_illu_stroke.svg" alt="" />
 
       <div class="hero-content">
         <h1>Pio Vinbar</h1>
@@ -35,7 +35,7 @@ console.log("data", data);
 
       <p class="hero_tekst">Bagerstræde 2, 1617 København V <br /> Reservér bord på +45 53 54 64 55</p>
 
-      <img class="illustration-right" src="./illustrations/hero_vinglas_illu.svg" alt="" />
+      <img class="illustration-right" src="/illustrations/hero_vinglas_illu.svg" alt="" />
     </div>
   </section>
   <div></div>
@@ -57,21 +57,21 @@ console.log("data", data);
         </div>
       </div>
     </div>
-    <img src="./illustrations/wineset_illu.svg" alt="" class="wineset" />
+    <img src="/illustrations/wineset_illu.svg" alt="" class="wineset" />
   </section>
 
   <MenuKort />
 
   <div class="mad_billeder">
-    <img src="./images/prawns_pic.webp" alt="" class="img_1" />
-    <img src="./images/light_pic.webp" alt="" class="img_2" />
-    <img src="./images/olives_pic.webp" alt="" class="img_3" />
+    <img src="/images/prawns_pic.webp" alt="" class="img_1" />
+    <img src="/images/light_pic.webp" alt="" class="img_2" />
+    <img src="/images/olives_pic.webp" alt="" class="img_3" />
   </div>
 
   <section>
     <div class="con_amore">Con Amore</div>
     <div class="grid1_1">
-      <img src="./images/people_frame_pic.webp" alt="" />
+      <img src="/images/people_frame_pic.webp" alt="" />
       <p>Hos Pio har vi fokus på vores gæsters oplevelser, når de besøger os. Vi ønsker at skabe et rum, hvor der er plads til afslappet hygge i behagelige omgivelser, hvor vi lægger vægt på at præsentere gode produkter med kærlighed og lidenskab. Vi tror på, at venlighed og smil giver alle den bedste oplevelse. Vores nøgleord er hygge, atmosfære, intimitet, varme og relationer. Og vi håber at vi lever op til dem.</p>
     </div>
   </section>
@@ -157,6 +157,10 @@ console.log("data", data);
     left: 71%;
   }
 
+  .open {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   @media (min-width: 600px) {
     .hero {
       margin-inline: -10rem; /* trækker den ud */
