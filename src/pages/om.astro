@@ -9,7 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div>
       <h2 class="who">Hvem er vi?</h2>
       <p class="amore_text">Bag Pio Vinbar er ejerne Jesper, Anders, Kaare og Phillip, som alle deler en fælles passion for vin. I dag er vi stolte af at have et dedikeret og erfarent team af søde og passionerede medarbejdere, der hver dag arbejder for at give vores gæster den bedste oplevelse. <br /><br />Vores vinreoler kommer fra Pio vin, som senere blev til Pio Vinbar. Kom forbi og se de flotte reoler og hvad vi har stående på hylderne:)</p>
-      <img class="illu" src="/illustrations/can_illu.svg" alt="can" />
+      <img class="can" src="/illustrations/can_illu.svg" alt="can" />
     </div>
   </div>
 
@@ -22,7 +22,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div class="last_text">
       <h2>Hvor kommer navnet fra?</h2>
       <p>Pio Vinbar blev grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
-      <img class="illu" src="/illustrations/wineset_illu.svg" alt="wineset" />
+      <img class="wineset" src="/illustrations/wineset_illu.svg" alt="wineset" />
       <img class="friends" src="/images/friends_pic.webp" alt="friends" />
     </div>
   </div>
@@ -40,16 +40,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
-  .con_amore {
-    font-family: "Caveat";
-    font-size: 4rem;
-    color: #5a6b3b;
-    display: grid;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-
   h1 {
     margin-bottom: 2rem;
   }
@@ -77,14 +67,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin-top: 4rem;
   }
 
-  .can {
-    display: none;
-  }
-
-  .wineset {
-    display: none;
-  }
-
   .amore_text {
     padding-bottom: 2rem;
   }
@@ -98,20 +80,24 @@ import MainLayout from "../layouts/MainLayout.astro";
     grid-template-columns: 1fr 2fr;
   }
 
-  .illu {
-    width: 50%;
-    margin-left: auto;
-  }
   .friends {
     margin-top: 2rem;
     width: 100%;
   }
   .video_box1 {
-    margin-top: 10rem;
+    margin-top: 3rem;
   }
   h4 {
-    margin-bottom: 2rem;
     text-align: center;
+  }
+  .con_amore {
+    font-family: "Caveat";
+    font-size: 4rem;
+    color: #5a6b3b;
+    display: grid;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
   }
 
   @media screen and (max-width: 800px) {
@@ -119,9 +105,10 @@ import MainLayout from "../layouts/MainLayout.astro";
       position: relative;
     }
     .wine {
-      width: 400px;
+      width: 480px;
       position: absolute;
-      transform: translate(-60%, -48%);
+      transform: translate(-65%, -48%);
+      margin-top: 1rem;
     }
   }
 
@@ -145,7 +132,8 @@ import MainLayout from "../layouts/MainLayout.astro";
       gap: 1rem;
     }
     .amore_pic {
-      width: 100%;
+      width: 105%;
+      padding-right: 2rem;
     }
     .amore {
       padding-top: 1rem;
@@ -153,10 +141,15 @@ import MainLayout from "../layouts/MainLayout.astro";
     .name_text {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin-top: 5rem;
     }
     p {
       max-width: 57ch;
+    }
+    .wine {
+      width: 102%;
+    }
+    .last_text {
+      margin-top: 2rem;
     }
     .con_amore {
       font-family: "Caveat";
@@ -165,26 +158,29 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: grid;
       justify-content: center;
       padding-top: 1rem;
-      padding-bottom: 2rem;
-    }
-    .last_text {
-      margin-top: 7rem;
     }
     .video_box1 {
-      margin-top: 5rem;
       margin-bottom: 10rem;
     }
   }
   @media screen and (min-width: 1200px) {
-    .illu {
-      width: 25%;
+    .can {
+      width: 30%;
       margin-left: auto;
-      margin-right: 5rem;
+      margin-right: 2rem;
+    }
+    .wineset {
+      width: 20%;
+      margin-left: auto;
+      margin-right: 2rem;
     }
   }
 
   @media screen and (max-width: 1200px) {
-    .illu {
+    .wineset {
+      display: none;
+    }
+    .can {
       display: none;
     }
   }
