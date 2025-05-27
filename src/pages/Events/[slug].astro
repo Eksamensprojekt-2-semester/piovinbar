@@ -26,6 +26,7 @@ const { item } = Astro.props;
 ---
 
 <MainLayout title={`${item.name}`}>
+  <a href="/event_site" class="tilbage">&larr; Gå tilbage</a>
   <div class="event">
     <section class="grid1_1">
       <div class="billede">
@@ -49,18 +50,23 @@ const { item } = Astro.props;
 </MainLayout>
 
 <style>
+  .tilbage {
+    text-decoration: none;
+    color: #3c1518;
+  }
+
   p {
     max-width: 75ch;
   }
 
-     .evnt_liste {
-      padding-top: 1rem;
-      padding-left: 1rem;
-    }
+  .evnt_liste {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
 
   .event_ilu {
     position: absolute;
-   top: 5%;
+    top: 5%;
     left: 9%;
     z-index: 0;
     max-width: 400px;
@@ -72,8 +78,8 @@ const { item } = Astro.props;
     position: relative;
     display: inline-block;
     z-index: 1;
-    padding-bottom:3rem;
-        padding-left: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
   }
 
   .billede img:first-of-type {
@@ -105,16 +111,13 @@ const { item } = Astro.props;
     }
 
     .event_ilu {
-           position: absolute;
-        top: 3%;
-        left: 7%;
-        z-index: 0;
-        max-width: 430px;
-        height: auto;
-        pointer-events: none;
+      position: absolute;
+      top: 3%;
+      left: 7%;
+      z-index: 0;
+      max-width: 430px;
+      height: auto;
+      pointer-events: none;
+    }
   }
-  }
-
-
-
 </style>

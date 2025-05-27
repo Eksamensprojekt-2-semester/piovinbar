@@ -58,7 +58,13 @@ console.log("data", data);
     <img src="/illustrations/wineset_illu.svg" alt="" class="wineset" />
   </section>
 
-  <MenuKort />
+  <section id="menukortet">
+    <h2 class="menukort">Menukort</h2>
+    <div class="relativ">
+      <img src="/illustrations/olives_illu.svg" alt="" class="olives" />
+    </div>
+    <MenuKort />
+  </section>
 
   <div class="mad_billeder">
     <img src="/images/prawns_pic.webp" alt="" class="img_1" />
@@ -85,129 +91,33 @@ console.log("data", data);
     </div>
     <Button />
   </section>
-</MainLayout>
 
-<style>
-  .hero_illu {
-    position: absolute;
-    background-size: cover;
-    top: 7%;
-    width: 100%;
-  }
-  .hero-content {
-    position: absolute;
-    top: 70vw;
-    left: 5vw;
-    z-index: 2;
-  }
-  h1 {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-  .hero_p {
-    max-width: 17rem;
-  }
+  <style>
+    .menukort {
+      text-align: center;
+    }
 
-  .menucard_pic {
-    margin-bottom: 2rem;
-  }
+    .relativ {
+      position: relative;
+    }
 
-  .event_h2 {
-    display: grid;
-    justify-content: center;
-    padding-bottom: 2rem;
-    padding-top: 4rem;
-  }
-  .events {
-    display: grid;
-    gap: 2rem;
-  }
-  .people_img {
-    padding-bottom: 2rem;
-  }
-  .con_amore {
-    font-family: "Caveat";
-    font-size: 4rem;
-    color: #5a6b3b;
-    display: grid;
-    justify-content: center;
-    padding-top: 3rem;
-    padding-bottom: 0rem;
-  }
-
-  .wineset {
-    width: 40%;
-  }
-
-  .mad_billeder {
-    display: grid;
-    gap: 2rem;
-    padding-top: 3rem;
-  }
-
-  .hero {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-  }
-
-  .hero_video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
-  .hero_tekst {
-    position: absolute;
-    z-index: 2;
-    top: 72%;
-    left: 15.2%;
-  }
-
-  .illustration-right {
-    position: absolute;
-    z-index: 1;
-    top: 15%;
-    width: 33%;
-    left: 71%;
-  }
-  .menu_grid {
-    margin-top: 10rem;
-  }
-  .open {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .mad_billeder {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding-top: 3rem;
-  }
-  .img_1 {
-    margin-top: 1rem;
-  }
-  .img_2 {
-    margin-top: 3rem;
-    width: 100%;
-  }
-
-  @media (min-width: 800px) {
+    .olives {
+      position: absolute;
+      position: absolute;
+      top: 36px;
+      left: -7%;
+      width: 20%;
+    }
     .hero_illu {
       position: absolute;
       background-size: cover;
-      top: -15%;
+      top: 7%;
       width: 100%;
     }
     .hero-content {
       position: absolute;
-      top: 42vw;
-      left: 15vw;
+      top: 70vw;
+      left: 5vw;
       z-index: 2;
     }
     h1 {
@@ -219,45 +129,8 @@ console.log("data", data);
       max-width: 17rem;
     }
 
-    .grid1_1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      position: relative;
-      margin-top: 0;
-    }
-
-    .wineset {
-      position: absolute;
-      width: 14%;
-      top: 55%;
-      left: 62%;
-    }
-
-    .mad_billeder {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      padding-top: 8rem;
-    }
-
-    .img_2 {
-      margin-top: 6rem;
-    }
-    .con_amore {
-      font-family: "Caveat";
-      font-size: 7rem;
-      color: #5a6b3b;
-      display: grid;
-      justify-content: center;
-      padding-top: 6rem;
+    .menucard_pic {
       margin-bottom: 2rem;
-    }
-
-    .events {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 5rem;
     }
 
     .event_h2 {
@@ -266,5 +139,159 @@ console.log("data", data);
       padding-bottom: 2rem;
       padding-top: 4rem;
     }
-  }
-</style>
+    .events {
+      display: grid;
+      gap: 2rem;
+    }
+    .people_img {
+      padding-bottom: 2rem;
+    }
+    .con_amore {
+      font-family: "Caveat";
+      font-size: 4rem;
+      color: #5a6b3b;
+      display: grid;
+      justify-content: center;
+      padding-top: 3rem;
+      padding-bottom: 0rem;
+    }
+
+    .wineset {
+      width: 40%;
+    }
+
+    .mad_billeder {
+      display: grid;
+      gap: 2rem;
+      padding-top: 3rem;
+    }
+
+    .hero {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+    }
+
+    .hero_video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .hero_tekst {
+      position: absolute;
+      z-index: 2;
+      top: 72%;
+      left: 15.2%;
+    }
+
+    .illustration-right {
+      position: absolute;
+      z-index: 1;
+      top: 15%;
+      width: 33%;
+      left: 71%;
+    }
+    .menu_grid {
+      margin-top: 10rem;
+    }
+    .open {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mad_billeder {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      padding-top: 3rem;
+    }
+    .img_1 {
+      margin-top: 1rem;
+    }
+    .img_2 {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    @media (min-width: 800px) {
+      .olives {
+        position: absolute;
+        top: 32px;
+        left: -3%;
+        width: 7%;
+      }
+      .hero_illu {
+        position: absolute;
+        background-size: cover;
+        top: -15%;
+        width: 100%;
+      }
+      .hero-content {
+        position: absolute;
+        top: 42vw;
+        left: 15vw;
+        z-index: 2;
+      }
+      h1 {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      .hero_p {
+        max-width: 17rem;
+      }
+
+      .grid1_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        position: relative;
+        margin-top: 0;
+      }
+
+      .wineset {
+        position: absolute;
+        width: 14%;
+        top: 55%;
+        left: 62%;
+      }
+
+      .mad_billeder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        padding-top: 8rem;
+      }
+
+      .img_2 {
+        margin-top: 6rem;
+      }
+      .con_amore {
+        font-family: "Caveat";
+        font-size: 7rem;
+        color: #5a6b3b;
+        display: grid;
+        justify-content: center;
+        padding-top: 6rem;
+        margin-bottom: 2rem;
+      }
+
+      .events {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+      }
+
+      .event_h2 {
+        display: grid;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 4rem;
+      }
+    }
+  </style>
+</MainLayout>
