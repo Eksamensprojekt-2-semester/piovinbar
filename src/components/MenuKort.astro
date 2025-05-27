@@ -2,12 +2,12 @@
 
 ---
 
-<section>
+<section class="menukort">
   <hr />
   <details>
     <summary><div>Vinkort</div> <div class="plus">+</div></summary>
     <div class="menu_overskrift_2">Mousserende</div>
-    <div class="menu-item">2020 Diefenhardt Riesling Brut / Rheingau / 12% / 400,-</div>
+    <div class="menu-item">2020 Diefenhardt Riesling Brut / Rheingau / 12% / <div class="pris">400,-</div></div>
     <div class="menu-item">Vita Vivet Cava / Penedès / Spanien / Øko / 425,-</div>
     <div class="menu-item">Deshora Cava Brut / Valencia / Spanien / Øko / 425,-</div>
     <div class="menu-item">2021 Joan Rubio Ancestral Monastrell / Penedès / Spanien / Naturvin / 500,-</div>
@@ -218,6 +218,9 @@
 <hr />
 
 <style>
+  .pris {
+    margin-left: auto;
+  }
   .menu_overskrift_2 {
     display: grid;
     place-items: center;
@@ -265,5 +268,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+
+  .menukort {
+    padding-top: 5rem;
   }
 </style>

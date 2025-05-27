@@ -26,18 +26,29 @@ console.log("data", data);
       <source src="/videos/piomontage.webm" type="video/webm" />
     </video>
 
-    <div class="hero-overlay">
-      <img class="illustration-left" src="/illustrations/hero_vin_illu_stroke.svg" alt="" />
+    <!-- <div class="hero-overlay">
+      <img class="illustration-left" src="/illustrations/hero_vin_illu_2.svg" alt="" />
 
       <div class="hero-content">
-        <h1>Pio Vinbar</h1>
+        <h1 class="hero_h1">Pio Vinbar</h1>
+        <p class="hero_p">Bagerstræde 2, 1617 København V Reservér bord på +45 53 54 64 55</p>
+      </div> -->
+
+    <div class="hero-overlay">
+      <div class="hero-illu-wrapper">
+        <img class="illustration-left" src="/illustrations/hero_vin_illu_2.svg" alt="" />
+        <div class="hero-content">
+          <h1 class="hero_h1">Pio Vinbar</h1>
+          <p class="hero_p">Bagerstræde 2, 1617 København V Reservér bord på +45 53 54 64 55</p>
+        </div>
       </div>
 
-      <p class="hero_tekst">Bagerstræde 2, 1617 København V <br /> Reservér bord på +45 53 54 64 55</p>
-
-      <img class="illustration-right" src="/illustrations/hero_vinglas_illu.svg" alt="" />
+      <img class="illustration-right" src="/illustrations/ny_hero_vin.svg" alt="" />
     </div>
+
+    <!-- <img class="illustration-right" src="/illustrations/hero_vinglas_illu.svg" alt="" /> -->
   </section>
+
   <div></div>
 
   <section class="grid1_1">
@@ -71,7 +82,7 @@ console.log("data", data);
   <section>
     <div class="con_amore">Con Amore</div>
     <div class="grid1_1">
-      <img src="/images/people_frame_pic.webp" alt="" />
+      <img src="/images/people_frame_pic.webp" alt="" class="people_img" />
       <p>Hos Pio har vi fokus på vores gæsters oplevelser, når de besøger os. Vi ønsker at skabe et rum, hvor der er plads til afslappet hygge i behagelige omgivelser, hvor vi lægger vægt på at præsentere gode produkter med kærlighed og lidenskab. Vi tror på, at venlighed og smil giver alle den bedste oplevelse. Vores nøgleord er hygge, atmosfære, intimitet, varme og relationer. Og vi håber at vi lever op til dem.</p>
     </div>
   </section>
@@ -90,13 +101,26 @@ console.log("data", data);
 </MainLayout>
 
 <style>
+  .event_h2 {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+  }
+  .events {
+    display: grid;
+    gap: 2rem;
+  }
+  .people_img {
+    padding-bottom: 2rem;
+  }
   .con_amore {
     font-family: "Caveat";
     font-size: 4rem;
     color: #5a6b3b;
     display: grid;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
   }
 
@@ -111,10 +135,14 @@ console.log("data", data);
   }
 
   .hero {
-    margin-inline: -10rem; /* trækker den ud */
-    width: calc(100% + 20rem); /* fylder ud over padding */
-    position: relative;
-    overflow: hidden;
+    /* margin-inline: -10rem; trækker den ud */
+    /* width: calc(100% + 20rem); fylder ud over padding */
+    /* position: relative;
+    overflow: hidden; */
+
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
   }
 
   .hero_video {
@@ -129,17 +157,17 @@ console.log("data", data);
   .illustration-left {
     position: absolute;
     z-index: 1;
-    top: -11%;
+    top: 44%;
     width: 145%;
-    left: -35%;
+    left: -21%;
   }
 
   .hero-content {
-    position: absolute;
+    /* position: absolute;
     z-index: 2;
     top: 70%;
     width: 131%;
-    left: -22%;
+    left: -22%; */
   }
 
   .hero_tekst {
@@ -161,7 +189,15 @@ console.log("data", data);
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
+    .hero_h1 {
+      margin-bottom: -1rem;
+      text-align: left;
+    }
+
+    .hero_p {
+      max-width: 17rem;
+    }
     .hero {
       margin-inline: -10rem; /* trækker den ud */
       width: calc(100% + 20rem); /* fylder ud over padding */
@@ -179,19 +215,21 @@ console.log("data", data);
     }
 
     .illustration-left {
+      background-size: cover;
       position: absolute;
       z-index: 1;
-      top: -11%;
+      top: 64%;
       width: 145%;
-      left: -35%;
+      left: -21%;
     }
 
     .hero-content {
       position: absolute;
+      transform: translate(-50%, -50%);
+      top: 73%;
+      left: 23%;
       z-index: 2;
-      top: 61%;
-      width: 150%;
-      left: -50%;
+      margin-left: auto;
     }
 
     .hero_tekst {
@@ -204,8 +242,8 @@ console.log("data", data);
     .illustration-right {
       position: absolute;
       z-index: 1;
-      top: 48%;
-      width: 12%;
+      top: 15%;
+      width: 33%;
       left: 71%;
     }
 
@@ -226,16 +264,14 @@ console.log("data", data);
 
     .mad_billeder {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
-      grid-template-rows: 1f 1fr 1fr;
+      padding-top: 8rem;
     }
 
-    .img_1 {
-      display: grid;
-      grid-row: span 1/2;
+    .img_2 {
+      margin-top: 6rem;
     }
-
     .con_amore {
       font-family: "Caveat";
       font-size: 7rem;
