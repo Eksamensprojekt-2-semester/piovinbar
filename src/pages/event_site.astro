@@ -46,14 +46,27 @@ console.log("data", data);
   .section {
     padding: 1rem;
   }
-  .events {
+
+     .events {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+       padding-left: 1rem;
+  }
+
+  @media (max-width: 600px){
+ .events {
     display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 4rem;
        padding-left: 1rem;
   }
+  }
+ 
 
   @media (min-width: 600px);{
+
+  
  .overskrift {
     display: grid;
     justify-items: center;
