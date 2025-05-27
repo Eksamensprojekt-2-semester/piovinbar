@@ -58,7 +58,14 @@ console.log("data", data);
     <img src="/illustrations/wineset_illu.svg" alt="" class="wineset" />
   </section>
 
-  <MenuKort />
+  <section id="menukortet">
+    <h2 class="h2_menukort">Menukort</h2>
+    <div class="relativ_boks">
+      <img src="/illustrations/olives_illu.svg" alt="" class="olives" />
+    </div>
+
+    <MenuKort />
+  </section>
 
   <div class="mad_billeder">
     <img src="/images/prawns_pic.webp" alt="" class="img_1" />
@@ -101,6 +108,24 @@ console.log("data", data);
     z-index: 2;
     margin-left: auto;
   } */
+  .olives {
+    position: absolute;
+    top: -67px;
+    left: -5%;
+    width: 17%;
+  }
+
+  .relativ_boks {
+    position: relative;
+  }
+  .h2_menukort {
+    display: grid;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    z-index: 2;
+  }
+
   .hero_illu {
     position: absolute;
     background-size: cover;
