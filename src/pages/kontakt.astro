@@ -46,16 +46,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   </div>
 
   <div class="section2">
-    <div>
+   
       <div>
         <h2>Booking</h2>
         <p class="bookingtekst">Du kan altid booke bord til en middag eller et glas vin hos os. Ring i barens åbningstid på +45 53 54 64 55 eller skriv til piovin@piovin.dk. <br /> <br /> Planlægger du en fødselsdag, barnedåb, vinsmagning eller et andet arrangement? Vi stiller gerne vinbaren til rådighed kontakt os, så finder vi den rette løsning. <br /> <br />Har du yderligere spørgsmål, hjælper vi gerne.</p>
       </div>
-      <div class="boxoister">
-        <img class="oisterillu" src="/illustrations/oister_illu.svg" alt="facade" />
-      </div>
-    </div>
-  </div>
+        <img class="oisterillu" src="/illustrations/oister_illu.svg" alt="facade" class="boxoister"/>
+
 </MainLayout>
 
 <style>
@@ -93,13 +90,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .oisterillu {
-    width: 550px;
+    /* width: 550px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-25%, -100%);
     z-index: -1;
-    opacity: 20%;
+    opacity: 20%; */
   }
 
   .bookingtekst {
@@ -109,6 +106,10 @@ import MainLayout from "../layouts/MainLayout.astro";
   .section1 {
     margin-bottom: 10rem;
   }
+
+   .section2 {
+    
+    }
 
   @media screen and (min-width: 800px) {
     main {
@@ -126,13 +127,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .oisterillu {
-      width: 1000px;
-      position: absolute;
-      top: 30px;
-      left: 53%;
-      transform: translate(-5%, -46%);
+      width: 100%;
       z-index: -1;
-      opacity: 50%;
+      margin-left: auto;
+      opacity: 50%; */
     }
 
     .bookingtekst {
@@ -154,7 +152,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     .section2 {
       margin-bottom: 25rem;
-      margin-left: 2.5rem;
+      margin-left: 1.5rem;
+       display: grid;
+     grid-template-columns: 1fr 1fr;
     }
   }
 </style>
