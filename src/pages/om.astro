@@ -9,6 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div>
       <h2 class="who">Hvem er vi?</h2>
       <p class="amore_text">Bag Pio Vinbar er ejerne Jesper, Anders, Kaare og Phillip, som alle deler en fælles passion for vin. I dag er vi stolte af at have et dedikeret og erfarent team af søde og passionerede medarbejdere, der hver dag arbejder for at give vores gæster den bedste oplevelse. <br /><br />Vores vinreoler kommer fra Pio vin, som senere blev til Pio Vinbar. Kom forbi og se de flotte reoler og hvad vi har stående på hylderne:)</p>
+      <img class="illu" src="/illustrations/can_illu.svg" alt="can" />
     </div>
   </div>
 
@@ -21,7 +22,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div class="last_text">
       <h2>Hvor kommer navnet fra?</h2>
       <p>Pio Vinbar blev grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
-      <img class="wineset_illu" src="/illustrations/wineset_illu.svg" alt="wineset" />
+      <img class="illu" src="/illustrations/wineset_illu.svg" alt="wineset" />
+      <img class="friends" src="/images/friends_pic.webp" alt="friends" />
     </div>
   </div>
 
@@ -96,12 +98,16 @@ import MainLayout from "../layouts/MainLayout.astro";
     grid-template-columns: 1fr 2fr;
   }
 
-  .wineset_illu {
+  .illu {
     width: 50%;
     margin-left: auto;
   }
+  .friends {
+    margin-top: 2rem;
+    width: 100%;
+  }
   .video_box1 {
-    margin-top: 15rem;
+    margin-top: 10rem;
   }
   h4 {
     margin-bottom: 2rem;
@@ -113,9 +119,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       position: relative;
     }
     .wine {
-      width: 350px;
+      width: 400px;
       position: absolute;
-      transform: translate(-60%, -43%);
+      transform: translate(-60%, -48%);
     }
   }
 
@@ -147,9 +153,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     .name_text {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      margin-top: 5rem;
     }
     p {
-      max-width: 50ch;
+      max-width: 57ch;
     }
     .con_amore {
       font-family: "Caveat";
@@ -161,15 +168,24 @@ import MainLayout from "../layouts/MainLayout.astro";
       padding-bottom: 2rem;
     }
     .last_text {
-      margin-top: 5rem;
-    }
-
-    .wineset_illu {
-      width: 35%;
-      margin-left: auto;
+      margin-top: 7rem;
     }
     .video_box1 {
       margin-top: 5rem;
+      margin-bottom: 10rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .illu {
+      width: 25%;
+      margin-left: auto;
+      margin-right: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .illu {
+      display: none;
     }
   }
 </style>
