@@ -25,34 +25,21 @@ console.log("data", data);
     <video class="hero_video" autoplay loop muted playsinline>
       <source src="/videos/piomontage.webm" type="video/webm" />
     </video>
-
-    <!-- <div class="hero-overlay">
-      <img class="illustration-left" src="/illustrations/hero_vin_illu_2.svg" alt="" />
-
-      <div class="hero-content">
-        <h1 class="hero_h1">Pio Vinbar</h1>
-        <p class="hero_p">Bagerstræde 2, 1617 København V Reservér bord på +45 53 54 64 55</p>
-      </div> -->
-
     <div class="hero-overlay">
       <div class="hero-illu-wrapper">
-        <img class="illustration-left" src="/illustrations/hero_vin_illu_2.svg" alt="" />
+        <img class="hero_illu" src="/illustrations/hero_illu.svg" alt="hero_illu" />
         <div class="hero-content">
           <h1 class="hero_h1">Pio Vinbar</h1>
           <p class="hero_p">Bagerstræde 2, 1617 København V Reservér bord på +45 53 54 64 55</p>
         </div>
       </div>
-
-      <img class="illustration-right" src="/illustrations/ny_hero_vin.svg" alt="" />
     </div>
-
-    <!-- <img class="illustration-right" src="/illustrations/hero_vinglas_illu.svg" alt="" /> -->
   </section>
 
   <div></div>
 
   <section class="grid1_1">
-    <img src="/images/menucard_pic.webp" alt="" />
+    <img class="menucard_pic" src="/images/menucard_pic.webp" alt="menukort_billede" />
     <div>
       <h2>Åbningstider</h2>
       <div class="open">
@@ -101,6 +88,45 @@ console.log("data", data);
 </MainLayout>
 
 <style>
+  /* .hero_illu {
+    position: absolute;
+    top: 7%;
+    width: 100%;
+  }
+  .hero-content {
+    position: absolute;
+    transform: translate(-33%, -50%);
+    top: 38%;
+    left: 26%;
+    z-index: 2;
+    margin-left: auto;
+  } */
+  .hero_illu {
+    position: absolute;
+    background-size: cover;
+    top: 7%;
+    width: 100%;
+  }
+  .hero-content {
+    position: absolute;
+    top: 70vw;
+    left: 5vw;
+    z-index: 2;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .hero_p {
+    max-width: 17rem;
+  }
+
+  .menucard_pic {
+    margin-top: 11rem;
+    margin-bottom: 2rem;
+  }
+
   .event_h2 {
     display: grid;
     justify-content: center;
@@ -135,11 +161,6 @@ console.log("data", data);
   }
 
   .hero {
-    /* margin-inline: -10rem; trækker den ud */
-    /* width: calc(100% + 20rem); fylder ud over padding */
-    /* position: relative;
-    overflow: hidden; */
-
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -154,22 +175,6 @@ console.log("data", data);
     z-index: 0;
   }
 
-  .illustration-left {
-    position: absolute;
-    z-index: 1;
-    top: 44%;
-    width: 145%;
-    left: -21%;
-  }
-
-  .hero-content {
-    /* position: absolute;
-    z-index: 2;
-    top: 70%;
-    width: 131%;
-    left: -22%; */
-  }
-
   .hero_tekst {
     position: absolute;
     z-index: 2;
@@ -180,8 +185,8 @@ console.log("data", data);
   .illustration-right {
     position: absolute;
     z-index: 1;
-    top: 48%;
-    width: 12%;
+    top: 15%;
+    width: 33%;
     left: 71%;
   }
 
@@ -189,62 +194,31 @@ console.log("data", data);
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 750px) {
-    .hero_h1 {
-      margin-bottom: -1rem;
+  @media (min-width: 800px) {
+    .hero_illu {
+      position: absolute;
+      background-size: cover;
+      top: -15%;
+      width: 100%;
+    }
+    .hero-content {
+      position: absolute;
+      top: 42vw;
+      left: 15vw;
+      z-index: 2;
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
       text-align: left;
     }
-
     .hero_p {
       max-width: 17rem;
     }
-    .hero {
-      margin-inline: -10rem; /* trækker den ud */
-      width: calc(100% + 20rem); /* fylder ud over padding */
-      position: relative;
-      overflow: hidden;
-    }
 
-    .hero_video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    .illustration-left {
-      background-size: cover;
-      position: absolute;
-      z-index: 1;
-      top: 64%;
-      width: 145%;
-      left: -21%;
-    }
-
-    .hero-content {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 73%;
-      left: 23%;
-      z-index: 2;
-      margin-left: auto;
-    }
-
-    .hero_tekst {
-      position: absolute;
-      z-index: 2;
-      top: 72%;
-      left: 15.2%;
-    }
-
-    .illustration-right {
-      position: absolute;
-      z-index: 1;
-      top: 15%;
-      width: 33%;
-      left: 71%;
+    .menucard_pic {
+      margin-top: 9rem;
+      margin-bottom: 2rem;
     }
 
     .grid1_1 {
