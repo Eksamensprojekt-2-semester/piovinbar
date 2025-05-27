@@ -38,7 +38,7 @@ console.log("data", data);
 
   <div></div>
 
-  <section class="grid1_1">
+  <section class="grid1_1 menu_grid">
     <img class="menucard_pic" src="/images/menucard_pic.webp" alt="menukort_billede" />
     <div>
       <h2>Åbningstider</h2>
@@ -88,19 +88,6 @@ console.log("data", data);
 </MainLayout>
 
 <style>
-  /* .hero_illu {
-    position: absolute;
-    top: 7%;
-    width: 100%;
-  }
-  .hero-content {
-    position: absolute;
-    transform: translate(-33%, -50%);
-    top: 38%;
-    left: 26%;
-    z-index: 2;
-    margin-left: auto;
-  } */
   .hero_illu {
     position: absolute;
     background-size: cover;
@@ -123,7 +110,6 @@ console.log("data", data);
   }
 
   .menucard_pic {
-    margin-top: 11rem;
     margin-bottom: 2rem;
   }
 
@@ -146,8 +132,8 @@ console.log("data", data);
     color: #5a6b3b;
     display: grid;
     justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
   }
 
   .wineset {
@@ -189,11 +175,28 @@ console.log("data", data);
     width: 33%;
     left: 71%;
   }
-
+  .menu_grid {
+    margin-top: 10rem;
+  }
   .open {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .mad_billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 3rem;
+  }
+  .img_1 {
+    margin-top: 1rem;
+  }
+  .img_2 {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
   @media (min-width: 800px) {
     .hero_illu {
       position: absolute;
@@ -216,17 +219,12 @@ console.log("data", data);
       max-width: 17rem;
     }
 
-    .menucard_pic {
-      margin-top: 9rem;
-      margin-bottom: 2rem;
-    }
-
     .grid1_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
       position: relative;
-      padding-bottom: 3rem;
+      margin-top: 0;
     }
 
     .wineset {
@@ -252,7 +250,8 @@ console.log("data", data);
       color: #5a6b3b;
       display: grid;
       justify-content: center;
-      padding-top: 4rem;
+      padding-top: 6rem;
+      margin-bottom: 2rem;
     }
 
     .events {
