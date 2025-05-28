@@ -89,14 +89,23 @@ console.log("data", data);
         })
       }
     </div>
-    <Button />
+
+    <div class="event_knap">
+      <Button href="/event_site" text="Se flere" />
+    </div>
   </section>
 
   <style>
     .menukort {
       text-align: center;
+      padding-top: 4rem;
     }
 
+    .event_knap {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
     .relativ {
       position: relative;
     }
@@ -104,7 +113,7 @@ console.log("data", data);
     .olives {
       position: absolute;
       position: absolute;
-      top: 36px;
+      top: -40px;
       left: -7%;
       width: 20%;
     }
@@ -220,9 +229,9 @@ console.log("data", data);
     @media (min-width: 800px) {
       .olives {
         position: absolute;
-        top: 32px;
+        top: -81px;
         left: -3%;
-        width: 7%;
+        width: 10%;
       }
       .hero_illu {
         position: absolute;
@@ -257,7 +266,7 @@ console.log("data", data);
         position: absolute;
         width: 14%;
         top: 55%;
-        left: 62%;
+        left: 87%;
       }
 
       .mad_billeder {

@@ -18,7 +18,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           </div>
           <h2>Åbningstider</h2>
           <p>
-            <div class="grid_1-1 ugedage">
+            <div class="grid_1-1_ugedage">
               <div>
                 <p>
                   Man-Tors:<br />
@@ -46,39 +46,49 @@ import MainLayout from "../layouts/MainLayout.astro";
   </div>
 
   <div class="section2">
-      <div>
-        <h2>Booking</h2>
-        <p class="bookingtekst">Du kan altid booke bord til en middag eller et glas vin hos os. Ring i barens åbningstid på +45 53 54 64 55 eller skriv til piovin@piovin.dk. <br /> <br /> Planlægger du en fødselsdag, barnedåb, vinsmagning eller et andet arrangement? Vi stiller gerne vinbaren til rådighed kontakt os, så finder vi den rette løsning. <br /> <br />Har du yderligere spørgsmål, hjælper vi gerne.</p>
-      </div>
-    
-        <img class="oisterillu" src="/illustrations/oister_illu.svg" alt="facade"/>
+    <div>
+      <h2>Booking</h2>
+      <p class="bookingtekst">Du kan altid booke bord til en middag eller et glas vin hos os. Ring i barens åbningstid på +45 53 54 64 55 eller skriv til piovin@piovin.dk. <br /> <br /> Planlægger du en fødselsdag, barnedåb, vinsmagning eller et andet arrangement? Vi stiller gerne vinbaren til rådighed kontakt os, så finder vi den rette løsning. <br /> <br />Har du yderligere spørgsmål, hjælper vi gerne.</p>
+    </div>
+
+    <img class="oisterillu" src="/illustrations/oister_illu.svg" alt="facade" />
   </div>
 </MainLayout>
 
 <style>
+  .grid_1-1_ugedage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 13rem;
   }
 
   .ugedage {
-    max-width: 15rem;
+    max-width: 16rem;
   }
 
   .boxfacade {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-end; /* Skubber billedet helt til højre */
+    align-items: center; /* (valgfrit) centrerer vertikalt */
   }
 
   .facadeillu {
-    width: 250px;
+    /* width: 75%; */
+    /* width: 250px;
     position: absolute;
     top: 8%;
     left: 50%;
-    transform: translateX(-78%); /* erstatter left: -40% */
+    transform: translateX(-78%); erstatter left: -40% */
   }
 
   .infobox {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
   }
 
   .info {
@@ -90,13 +100,10 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .oisterillu {
-    width: 550px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-25%, -100%);
+    opacity: 40%;
     z-index: -1;
-    opacity: 20%;
+    width: 90%;
+    margin-left: auto;
   }
 
   .bookingtekst {
@@ -107,12 +114,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin-bottom: 10rem;
   }
 
-   .section2 {
-      margin-bottom: 25rem;
-      margin-left: 2.5rem;
-      di
-    }
-
   @media screen and (min-width: 800px) {
     main {
       padding-inline: 15rem;
@@ -120,22 +121,12 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .facadeillu {
-      width: 400px;
+      /* width: 400px;
       position: absolute;
       top: 0%;
       left: 70%;
       transform: translateX(-90%);
-      justify-self: end;
-    }
-
-    .oisterillu {
-      width: 1000px;
-      position: absolute;
-      top: 30px;
-      left: 53%;
-      transform: translate(-5%, -46%);
-      z-index: -1;
-      opacity: 50%;
+      justify-self: end; */
     }
 
     .bookingtekst {
@@ -148,13 +139,18 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .infobox {
-      margin-left: 5rem;
+      /* margin-left: 5rem; */
     }
 
     .section1 {
       margin-bottom: 12rem;
     }
 
-   
+    .section2 {
+      /* margin-bottom: 25rem;
+      margin-left: 2.5rem; */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
