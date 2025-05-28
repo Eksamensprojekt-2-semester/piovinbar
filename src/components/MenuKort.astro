@@ -5,7 +5,10 @@
 <section class="menukort">
   <hr />
   <details>
-    <summary><div>Vinkort</div> <div class="plus">+</div></summary>
+    <summary>
+      <div class="vinkort_overskrift">Vinkort</div>
+      <div class="toggle-symbol">+</div>
+    </summary>
     <div class="menu_overskrift_2">Mousserende</div>
     <div class="menu-item">2020 Diefenhardt Riesling Brut / Rheingau / 12% / <div class="pris">400,-</div></div>
     <div class="menu-item">Vita Vivet Cava / Penedès / Spanien / Øko / 425,-</div>
@@ -114,7 +117,10 @@
   </details>
   <hr />
   <details>
-    <summary><div>Glaskort</div> <div class="plus">+</div></summary>
+    <summary>
+      <div class="vinkort_overskrift">Glaskort</div>
+      <div class="toggle-symbol">+</div>
+    </summary>
     <div class="menu_overskrift">Mousserende / Sparkling Wine</div>
     <div class="menu-item">Spumante Buon Bosch / Glera / Vazzola / Italien 70 / 325</div>
     <div class="menu-item">Vita Vivet Cava / Macabeo, Xarel-lo / Parellada / Spanien (øko) 90 / 425</div>
@@ -198,7 +204,10 @@
   </details>
   <hr />
   <details>
-    <summary><div>Madkort</div><div class="plus">+</div></summary>
+    <summary>
+      <div class="vinkort_overskrift">Madkort</div>
+      <div class="toggle-symbol">+</div>
+    </summary>
     <div class="menu_overskrift">Mad & Snacks / Food & Snacks</div>
     <div class="menu-item">Charcuteri & Ostebræt m. brød - 225,-(+ 200,- pr. ekstra person)</div>
     <div class="menu-item">Ostebræt m. brød - 165,-</div>
@@ -217,7 +226,24 @@
 </section>
 <hr />
 
+<script>
+  document.querySelectorAll("details").forEach((details) => {
+    const symbol = details.querySelector(".toggle-symbol");
+
+    if (symbol) {
+      symbol.textContent = "+";
+
+      details.addEventListener("toggle", () => {
+        symbol.textContent = details.open ? "-" : "+";
+      });
+    }
+  });
+</script>
+
 <style>
+  .vinkort_overskrift {
+    font-size: 1rem;
+  }
   .pris {
     margin-left: auto;
   }
@@ -225,21 +251,23 @@
     display: grid;
     place-items: center;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
     font-weight: 700;
     font-style: italic;
+    font-size: 1rem;
   }
   .menu_overskrift {
     display: grid;
     place-items: center;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
     font-weight: 700;
   }
 
   details {
-    padding: 1em;
     max-width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .plus {
@@ -252,8 +280,9 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items:;
+    align-items: center;
     cursor: pointer;
+    position: sticky;
   }
 
   details[open] {
@@ -263,6 +292,7 @@
 
   .menu-item {
     margin: 0.5em 0;
+    padding-bottom: 0.5rem;
   }
   .open {
     display: grid;
@@ -272,5 +302,10 @@
 
   .menukort {
     padding-top: 1rem;
+  }
+  .toggle-symbol {
+    padding-top: 6px;
+    margin-left: auto;
+    font-size: 1rem;
   }
 </style>
