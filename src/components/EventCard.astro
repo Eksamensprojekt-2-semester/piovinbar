@@ -3,23 +3,29 @@ const { data } = Astro.props;
 ---
 
 <a href={`/events/${data.slug}`}>
-  <article class="hover-1">
-    <img src={data.images} alt={`Image of ${data.name}`} class="billede" />
+  <div class="event_wrapper">
+    <article class="hover-1">
+      <img src={data.images} alt={`Image of ${data.name}`} class="billede" />
+      <div class="overlay">
+        <h2 class="tekst">Oplev d. {data.date}</h2>
+        <img src="/illustrations/logo_event.svg" alt="" class="logo_event" />
+      </div>
+      <img src="/illustrations/event_ilu.svg" alt="" class="event_ilu" />
+    </article>
 
-    <div class="overlay">
-      <h2 class="tekst">Oplev d. {data.date}</h2>
-      <img src="/illustrations/logo_event.svg" alt="" class="logo_event" />
+    <div class="tekst_boks">
+      <h3>{data.name}</h3>
+      <p>{data.short_description}</p>
     </div>
-    <img src="/illustrations/event_ilu.svg" alt="" class="event_ilu" />
-  </article>
-
-  <div class="tekst_boks">
-    <h3>{data.name}</h3>
-    <p>{data.short_description}</p>
   </div>
 </a>
 
 <style>
+  .event_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3rem;
+  }
   a {
     text-decoration: none;
   }
@@ -37,8 +43,8 @@ const { data } = Astro.props;
   }
 
   .tekst_boks {
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .logo_event {
@@ -49,11 +55,20 @@ const { data } = Astro.props;
   }
 
   .tekst {
-    font-size: 1.5rem;
-    padding-bottom: 4rem;
+    font-size: 2rem;
+    margin-top: -10rem;
+  }
+  @media (min-width: 600px) and (max-width: 1000px) {
+    .tekst {
+      margin-top: -4rem;
+      font-size: 1.2rem;
+    }
   }
 
   @media (min-width: 600px) {
+    .event_wrapper {
+      padding-right: 0;
+    }
     h2 {
       color: #f7f5ea;
       font-size: 30px;

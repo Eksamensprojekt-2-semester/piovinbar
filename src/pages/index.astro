@@ -36,8 +36,6 @@ console.log("data", data);
     </div>
   </section>
 
-  <div></div>
-
   <section class="grid1_1 menu_grid">
     <img class="menucard_pic" src="/images/menucard_pic.webp" alt="menukort_billede" />
     <div>
@@ -110,25 +108,13 @@ console.log("data", data);
       position: relative;
     }
 
-    .olives {
-      position: absolute;
-      position: absolute;
-      top: -40px;
-      left: -7%;
-      width: 20%;
-    }
     .hero_illu {
       position: absolute;
       background-size: cover;
-      top: 7%;
+      top: 13%;
       width: 100%;
     }
-    .hero-content {
-      position: absolute;
-      top: 70vw;
-      left: 5vw;
-      z-index: 2;
-    }
+
     h1 {
       margin: 0;
       padding: 0;
@@ -165,8 +151,15 @@ console.log("data", data);
       padding-bottom: 0rem;
     }
 
+    .tider {
+      margin-left: -2.5rem;
+    }
+
     .wineset {
-      width: 40%;
+      width: 35%;
+      margin-left: auto;
+      margin-right: 1rem;
+      margin-top: -1rem;
     }
 
     .mad_billeder {
@@ -225,26 +218,96 @@ console.log("data", data);
       margin-top: 3rem;
       width: 100%;
     }
-
-    @media (min-width: 800px) {
-      .olives {
-        position: absolute;
-        top: -81px;
-        left: -3%;
-        width: 10%;
-      }
-      .hero_illu {
-        position: absolute;
-        background-size: cover;
-        top: -15%;
-        width: 100%;
-      }
+    @media (max-width: 600px) {
       .hero-content {
         position: absolute;
-        top: 42vw;
+        top: 70vw;
+        left: 6vw;
+        z-index: 2;
+      }
+      .olives {
+        position: absolute;
+        top: -10vw;
+        left: -5vw;
+        width: 20%;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 800px) {
+      .hero-content {
+        position: absolute;
+        top: 60vw;
+        left: 10vw;
+        z-index: 2;
+      }
+      .olives {
+        position: absolute;
+        top: -10vw;
+        left: -5vw;
+        width: 18%;
+      }
+    }
+    @media (min-width: 801px) and (max-width: 900px) {
+      .hero-content {
+        position: absolute;
+        top: 50vw;
+        left: 12vw;
+        z-index: 2;
+      }
+      .olives {
+        position: absolute;
+        top: -7vw;
+        left: -5vw;
+        width: 20%;
+      }
+    }
+    @media (min-width: 901px) and (max-width: 1000px) {
+      .olives {
+        position: absolute;
+        top: -10vw;
+        left: -5vw;
+        width: 20%;
+      }
+    }
+    @media (min-width: 1001px) and (max-width: 1200px) {
+      .olives {
+        position: absolute;
+        top: -10vw;
+        left: -7vw;
+        width: 20%;
+      }
+    }
+    @media (min-width: 1201px) {
+      .olives {
+        position: absolute;
+        top: -120px;
+        left: -80px;
+        width: 15%;
+      }
+    }
+    @media (min-width: 901px) {
+      .hero-content {
+        position: absolute;
+        top: 44vw;
         left: 15vw;
         z-index: 2;
       }
+    }
+    @media (min-width: 600px) {
+      .events {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .hero_illu {
+        position: absolute;
+        background-size: cover;
+        top: 5%;
+        width: 100%;
+      }
+
       h1 {
         margin: 0;
         padding: 0;
@@ -287,12 +350,6 @@ console.log("data", data);
         justify-content: center;
         padding-top: 6rem;
         margin-bottom: 2rem;
-      }
-
-      .events {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 5rem;
       }
 
       .event_h2 {
