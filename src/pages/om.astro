@@ -44,7 +44,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div class="last_text">
       <h2>Hvor kommer navnet fra?</h2>
       <p>Pio Vinbar blev grundlagt i 2017 af Jesper og Anders ud fra ønsket om at skabe et sted, hvor man kunne samles med vennerne en fredag aften. Et sted, der føles som hjemme. Vinbaren startede småt ud, men har i dag udvidet sig til de to nabolokaler. <br /><br />I dag byder Pio Vinbar på en hyggelig og autentisk atmosfære. Her handler det om mere end vin – det handler om at skabe relationer, slappe af og nyde den gode stemning. Hos Pio Vinbar kan man sænke paraderne og være sig selv i et uformelt, hjemligt miljø.</p>
-      <img class="wineset" src="/illustrations/wineset_illu.svg" alt="wineset" />
       <img class="friends" src="/images/friends_pic.webp" alt="friends" />
     </div>
   </div>
@@ -86,16 +85,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .who {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
   .amore_text {
     padding-bottom: 2rem;
   }
 
-  .amore {
-    margin-bottom: 5rem;
-  }
   .name_text {
     align-items: center;
     display: grid;
@@ -104,7 +100,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   .insta_h2 {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 5rem;
   }
   .grid_1-1-1-1 {
     display: grid;
@@ -122,6 +119,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
   .post img:hover {
     transform: scale(1.05);
+  }
+  .last_text {
+    padding-top: 4rem;
   }
 
   .friends {
@@ -149,9 +149,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       position: relative;
     }
     .wine {
-      width: 480px;
+      width: 440px;
       position: absolute;
-      transform: translate(-65%, -48%);
+      transform: translate(-63%, -48%);
       margin-top: 1rem;
     }
   }
@@ -189,6 +189,12 @@ import MainLayout from "../layouts/MainLayout.astro";
     p {
       max-width: 57ch;
     }
+    .insta_h2 {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1rem;
+      padding-top: 10rem;
+    }
     .grid_1-1-1-1 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -198,7 +204,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       width: 102%;
     }
     .last_text {
-      margin-top: 2rem;
+      padding-top: 10rem;
     }
     .con_amore {
       font-family: "Caveat";
@@ -206,7 +212,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       color: #5a6b3b;
       display: grid;
       justify-content: center;
-      padding-top: 1rem;
+      padding-top: 3rem;
     }
     .video_box1 {
       margin-bottom: 10rem;
@@ -218,17 +224,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       margin-left: auto;
       margin-right: 2rem;
     }
-    .wineset {
-      width: 20%;
-      margin-left: auto;
-      margin-right: 2rem;
-    }
   }
 
   @media screen and (max-width: 1200px) {
-    .wineset {
-      display: none;
-    }
     .can {
       display: none;
     }
