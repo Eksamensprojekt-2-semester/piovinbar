@@ -59,12 +59,12 @@ import MainLayout from "../layouts/MainLayout.astro";
   .grid_1-1_ugedage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: -2rem;
   }
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 13rem;
+    gap: 1rem;
   }
 
   .ugedage {
@@ -77,16 +77,13 @@ import MainLayout from "../layouts/MainLayout.astro";
     justify-content: flex-end; /* Skubber billedet helt til højre */
     align-items: center; /* (valgfrit) centrerer vertikalt */
   }
-
-  .facadeillu {
-    /* width: 75%; */
-    /* width: 250px;
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translateX(-78%); erstatter left: -40% */
+  @media screen and (max-width: 800px) {
+    .facadeillu {
+      position: absolute;
+      left: -25%;
+      width: 75%;
+    }
   }
-
   .infobox {
     /* padding-top: 2rem; */
   }
@@ -115,18 +112,16 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   @media screen and (min-width: 800px) {
+    .grid_1-1 {
+      gap: 12rem;
+    }
     main {
       padding-inline: 15rem;
       max-width: 1200px;
     }
 
     .facadeillu {
-      /* width: 400px;
-      position: absolute;
-      top: 0%;
-      left: 70%;
-      transform: translateX(-90%);
-      justify-self: end; */
+      width: 100%;
     }
 
     .bookingtekst {

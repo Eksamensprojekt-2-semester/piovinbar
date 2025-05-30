@@ -13,25 +13,26 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </div>
 
+  <h2 class="insta_h2">Find os på instagram</h2>
   <div class="grid_1-1-1-1">
     <div class="post">
       <a href="https://www.instagram.com/piovinbar_eksamen/" target="_blank" class="insta-link">
-        <img src="/images/insta_bar_pic.webp" alt="Instagram post" />
+        <img src="/images/instagram_bar_pic.webp" alt="Instagram post" />
       </a>
     </div>
     <div class="post">
       <a href="https://www.instagram.com/piovinbar_eksamen/" target="_blank" class="insta-link">
-        <img src="/images/insta_boys_pic.webp" alt="Instagram post" />
+        <img src="/images/instagram_boys_pic.webp" alt="Instagram post" />
       </a>
     </div>
     <div class="post">
       <a href="https://www.instagram.com/piovinbar_eksamen/" target="_blank" class="insta-link">
-        <img src="/images/insta_girl_pic.webp" alt="Instagram post" />
+        <img src="/images/instagram_girl_pic.webp" alt="Instagram post" />
       </a>
     </div>
     <div class="post">
       <a href="https://www.instagram.com/piovinbar_eksamen/" target="_blank" class="insta-link">
-        <img src="/images/insta_wine_pic.webp" alt="Instagram post" />
+        <img src="/images/instagram_wine_pic.webp" alt="Instagram post" />
       </a>
     </div>
   </div>
@@ -84,17 +85,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin-bottom: 3rem;
   }
 
-  .grid_1-1-1-1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .post {
-    aspect-ratio: 1 / 1.2;
-    overflow: hidden;
-  }
-
   .who {
     margin-top: 4rem;
   }
@@ -110,6 +100,28 @@ import MainLayout from "../layouts/MainLayout.astro";
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+  .insta_h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .post img:hover {
+    transform: scale(1.05);
   }
 
   .friends {
@@ -176,6 +188,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
     p {
       max-width: 57ch;
+    }
+    .grid_1-1-1-1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 10rem;
     }
     .wine {
       width: 102%;
