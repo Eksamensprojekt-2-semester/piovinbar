@@ -21,7 +21,7 @@ console.log("data", data);
   <section class="event_side">
     <div class="overskrift">
       <h1 class">Kommende Events</h1>
-      <p>På pio åbner vi dørerne op for...</p>
+      <p class="event_h2">På pio åbner vi dørerne op for...</p>
     </div>
 
     <div class="events">
@@ -54,15 +54,17 @@ console.log("data", data);
      .events {
     display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
        padding-left: 1rem;
   }
+
+
 
   @media (max-width: 600px){
  .events {
     display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4rem;
+    gap: 6rem;
        padding-left: 1rem;
   }
   }
