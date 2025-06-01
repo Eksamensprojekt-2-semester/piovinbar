@@ -39,7 +39,6 @@ const { data } = Astro.props;
     color: #f7f5ea;
     font-size: 30px;
     font-weight: 300;
-    /* padding-top: 6rem; */
   }
 
   .tekst_boks {
@@ -81,29 +80,29 @@ const { data } = Astro.props;
   }
 
   .hover-1 {
-    position: relative; /* Gør det muligt at placere overlayet */
-    display: inline-block; /* Gør containeren til en blok, der kun fylder billedets bredde */
+    position: relative;
+    display: inline-block;
   }
 
   .overlay {
-    position: absolute; /* Gør det muligt at placere overlayet over billedet */
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #5a6b3b; /* Semi-transparent grå baggrund */
-    opacity: 0; /* Skjuler overlayet som standard */
+    background-color: #5a6b3b;
+    opacity: 0;
     display: grid;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease; /* Glidende overgang for opacitet */
+    transition: opacity 0.3s ease;
     border-radius: 5%;
     z-index: 2;
     gap: 2px;
   }
 
   .hover-1:hover .overlay {
-    opacity: 1; /* Gør overlayet synligt ved hover */
+    opacity: 1;
   }
 
   .event_ilu {

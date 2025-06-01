@@ -17,7 +17,7 @@
   /* Typografi – mobil*/
   --font-size-h1: 2.2rem;
   --font-size-h2: 1.5rem;
-  --font-size-p: 1rem;
+  --font-size-p: 1.2rem;
 }
 
 /* Desktop typografi*/
@@ -30,7 +30,7 @@
 }
 
 html {
-  font-size: 15px; /* Mindre end standard 16px */
+  font-size: 15px;
 }
 
 body {
