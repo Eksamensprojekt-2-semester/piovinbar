@@ -3,7 +3,7 @@
 ---
 
 <section class="menukort">
-  <hr />
+  <hr class="streg1" />
   <details>
     <summary>
       <div class="vinkort_overskrift">Vinkort</div>
@@ -242,7 +242,7 @@
 
 <style>
   .vinkort_overskrift {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .pris {
     margin-left: auto;
@@ -254,7 +254,8 @@
     margin-top: 1rem;
     font-weight: 700;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
   }
   .menu_overskrift {
     display: grid;
@@ -287,7 +288,8 @@
 
   details[open] {
     background-color: #f7f5ea;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: #3c1518;
   }
 
   .menu-item {
@@ -307,5 +309,22 @@
     padding-top: 6px;
     margin-left: auto;
     font-size: 1rem;
+  }
+
+  hr {
+    all: unset;
+    background-color: var(--color-secondary);
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin: 0.2rem 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    hr.streg1 {
+      width: 95%;
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 </style>

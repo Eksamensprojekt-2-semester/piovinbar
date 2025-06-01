@@ -1,7 +1,8 @@
 ---
-// Astro props og CSS-import
 import "../styles/style.css";
 const { title } = Astro.props;
+const { currentPath } = Astro.props;
+const isActive = (path) => (currentPath === path ? "active" : ""); /* Udarbejdet med hjælp fra ChatGPT*/
 ---
 
 <nav class="nav">
@@ -10,9 +11,9 @@ const { title } = Astro.props;
   </a>
   <ul class="menu">
     <li><a href="/#menukortet">Menukort</a></li>
-    <li><a href="/om">Mød Pio Vinbar</a></li>
-    <li><a href="/event_site">Events</a></li>
-    <li><a href="/kontakt">Kontakt</a></li>
+    <li><a href="/om" class={isActive("/om")}>Mød Pio Vinbar</a></li>
+    <li><a href="/event_site" class={isActive("/event_site")}>Events</a></li>
+    <li><a href="/kontakt" class={isActive("/kontakt")}>Kontakt</a></li>
   </ul>
   <div class="burger">
     <div class="line"></div>
@@ -69,6 +70,11 @@ const { title } = Astro.props;
     z-index: 10;
   }
 
+  .menu a.active {
+    border-bottom: 1px solid var(--color-secondary);
+    padding-bottom: 4px;
+  }
+
   nav.active .menu {
     display: flex;
   }
@@ -108,7 +114,6 @@ const { title } = Astro.props;
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* Desktop layout: 801px og op */
   @media screen and (min-width: 801px) {
     nav {
       padding: 3px 20px;
@@ -136,7 +141,7 @@ const { title } = Astro.props;
     }
 
     .menu a {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     .burger {
